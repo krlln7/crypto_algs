@@ -1,4 +1,4 @@
-package skipjack
+package internal
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ const (
 	chunkSize = 16 * 1024
 )
 
-func check(e error) {
+func Check(e error) {
 	if e != nil {
 		fmt.Fprintln(os.Stderr, "error:", e)
 		os.Exit(1)
